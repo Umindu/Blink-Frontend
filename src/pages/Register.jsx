@@ -1,20 +1,21 @@
 import React from 'react'
 import '@mantine/core/styles.css';
-import { Center, TextInput , PasswordInput, Button, Group, Text, Title, Divider, Box} from '@mantine/core';
+import '@mantine/dates/styles.css';
 import { IconArrowLeft } from '@tabler/icons-react';
 import { Link } from 'react-router-dom';
+import { Center, TextInput , PasswordInput, Button, Group, Text, Title, Divider, Box} from '@mantine/core';
 import { DatePickerInput } from '@mantine/dates';
 
 export default function Register() {
   return (
-    <div style={{ height: '100vh', width: '100vw', backgroundColor : '#DFDAFF'}}>
+    <div style={{ height: '100vh', width: '100vw', backgroundColor : '#EDEBFF'}}>
         <Center style={{ height: '100vh' }}>
                 <Box  w={{base: 300, sm: 400, lg:400}} h={600} p={20} style={{display: "flex", justifyContent: "center", flexDirection: "column", borderRadius: 10, backgroundColor : '#fff' }}>
                     <Title size="h2" c={'#7960fb'}>Create new account</Title>
 
                     <TextInput size="md" radius="md" label="Full name" placeholder="Your name"pt={15}  />
 
-                    <DatePickerInput defaultValue={new Date()} maxDate={new Date()} radius="md" label="Date of birth" placeholder="Pick date" pt={10} />
+                    <DatePickerInput size="md" defaultValue={new Date()} maxDate={new Date()} radius="md" label="Date of birth" placeholder="Pick date" pt={10} />
 
                     <TextInput size="md" radius="md" label="Email" placeholder="Your email"pt={10} />
 

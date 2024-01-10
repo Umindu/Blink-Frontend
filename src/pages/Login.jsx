@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Login() {
   return (
-    <div style={{ height: '100vh', width: '100vw', backgroundColor : '#DFDAFF'}}>
+    <div style={{ height: '100vh', width: '100vw', backgroundColor : '#EDEBFF'}}>
         <Center style={{ height: '100vh' }}>
                 <Box  w={{base: 300, sm: 400, lg:400}} h={410} p={20} style={{display: "flex", justifyContent: "center", flexDirection: "column", borderRadius: 10, backgroundColor : '#fff' }}>
                     <Title size="h1" c={'#7960fb'}>Sign in</Title>
