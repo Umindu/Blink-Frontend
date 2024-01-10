@@ -21,12 +21,12 @@ export default function Home() {
         </Group>
       </AppShell.Header>
       <AppShell.Navbar p="md">
-        <ScrollArea type="always" scrollbarSize={8} scrollHideDelay={500}>
+        <ScrollArea type="always" scrollbarSize={8} scrollHideDelay={500} mr={-8}>
           <NavBar/>
         </ScrollArea>
       </AppShell.Navbar>
       <AppShell.Main>
-        <ScrollArea type="always" scrollbarSize={8} scrollHideDelay={500}>
+        <ScrollArea type="always" scrollbarSize={8} scrollHideDelay={500} mr={-8}>
           <PostCreate/>
         </ScrollArea>
       </AppShell.Main>

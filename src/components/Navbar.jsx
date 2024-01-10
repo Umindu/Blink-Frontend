@@ -1,4 +1,3 @@
-import { IconHeart } from '@tabler/icons-react';
 import { Card, Image, Text, Group, Badge, Button, ActionIcon, Avatar, Flex, Divider, Title } from '@mantine/core';
 
 const mockdata = {
@@ -16,7 +15,7 @@ export function NavBar() {
   const { image, name, description, username } = mockdata;
   
   return (
-    <Card withBorder radius="md" p="md">
+    <Card withBorder radius="md" p="md" mr={8}>
       <Card.Section >
         <Flex justify="center" align="center"  direction="column">
             <Image src={image} alt={name} height={100}/>
