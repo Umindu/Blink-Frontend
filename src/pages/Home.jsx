@@ -1,12 +1,35 @@
-import { AppShell, Burger, Group, Skeleton, ScrollArea } from '@mantine/core';
+import { AppShell, Container, Flex, Group, ScrollArea, Center } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { MantineLogo } from '@mantinex/mantine-logo';
 import { Header } from '../components/Header';
 import { NavBar } from '../components/Navbar';
 import { PostCreate } from '../components/PostCreate';
+import { PostTemp } from '../components/PostTemp';
 
 export default function Home() {
   const [opened, { toggle }] = useDisclosure();
+
+  const mockdata = [{
+    userAvatar: '/src/assets/avatar.avif',
+    name: 'Kehlani Summer',
+    dateTime: '2h ago',
+    postImage:'/src/assets/post.png',
+    tag: 'mantine',
+    description:'😂Completely renovated dfgds for the season 2020❤️',
+},{
+    userAvatar: '/src/assets/avatar.avif',
+    name: 'Kehlani Summer',
+    dateTime: '2h ago',
+    postImage:'/src/assets/cover.jpg',
+    tag: 'mantine',
+    description:'😂Completely renovated dfgds for the season 2020💕💕',
+},{
+    userAvatar: '/src/assets/avatar.avif',
+    name: 'Kehlani Summer',
+    dateTime: '2h ago',
+    postImage:'/src/assets/avatar.avif',
+    tag: 'mantine',
+    description:'😂Completely renovated dfgds for the season 2020❤️',
+}];
 
   return (
     <AppShell
@@ -25,11 +48,18 @@ export default function Home() {
           <NavBar/>
         </ScrollArea>
       </AppShell.Navbar>
-      <AppShell.Main>
-        <ScrollArea type="always" scrollbarSize={8} scrollHideDelay={500} mr={-8}>
-          <PostCreate/>
-        </ScrollArea>
+      
+      <Center>
+      <AppShell.Main maw={1400}>
+          <ScrollArea type="always" scrollbarSize={8} scrollHideDelay={500} mr={-8}>
+            <PostCreate/>
+            <PostTemp mockdata={mockdata[0]}/>
+            <PostTemp mockdata={mockdata[1]}/>
+            <PostTemp mockdata={mockdata[2]}/>
+          </ScrollArea>
       </AppShell.Main>
+      
+      </Center>
       <AppShell.Aside p="md">
         Aside
       </AppShell.Aside>

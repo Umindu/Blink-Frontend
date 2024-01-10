@@ -1,25 +1,22 @@
 import { Card, Image, Text, Group, Badge, Button, ActionIcon, Avatar, Flex, Divider, Title } from '@mantine/core';
 
 const mockdata = {
-    image:
-    '/src/assets/cover.jpg',
+    userImage: '/src/assets/avatar.avif',
+    coverImage:'/src/assets/cover.jpg',
     name: 'Kehlani Summer',
     username: '@kehlaniS',
-    description:
-      '😂Completely renovated dfgds for the season 2020❤️',
-   
-  };
-
+    description:'😂Completely renovated dfgds for the season 2020❤️',
+};
 
 export function NavBar() {
-  const { image, name, description, username } = mockdata;
+  const { userImage, coverImage, name, description, username } = mockdata;
   
   return (
-    <Card withBorder radius="md" p="md" mr={8}>
+    <Card withBorder radius="lg" p="md" mr={8}>
       <Card.Section >
         <Flex justify="center" align="center"  direction="column">
-            <Image src={image} alt={name} height={100}/>
-            <Avatar  size={'xl'} mt={-45} src="/src/assets/avatar.avif" alt="it's me"/>
+            <Image src={coverImage} alt={name} height={100}/>
+            <Avatar  size={'xl'} mt={-45} src={userImage} alt="it's me"/>
         </Flex>
       </Card.Section>
 
