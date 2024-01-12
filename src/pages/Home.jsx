@@ -53,9 +53,12 @@ export default function Home() {
       <AppShell.Main maw={1400}>
           <ScrollArea type="always" scrollbarSize={8} scrollHideDelay={500} mr={-8}>
             <PostCreate/>
-            <PostTemp mockdata={mockdata[0]}/>
-            <PostTemp mockdata={mockdata[1]}/>
-            <PostTemp mockdata={mockdata[2]}/>
+
+            {/* map  post */}
+            {mockdata && mockdata.map((item, index) => (
+              <PostTemp mockdata={item} key={index}/>
+            ))}
+
           </ScrollArea>
       </AppShell.Main>
       
